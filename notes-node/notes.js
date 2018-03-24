@@ -1,5 +1,3 @@
-console.log("Starting node.js");
-
 var fs = require('fs');
 
 var fetchNotes = ()=>{
@@ -53,9 +51,14 @@ var logNote = (note) => {
     console.log(`title: ${note.title}\tbody: ${note.body}`);
 };
 
+var getAll = ()=>{
+    return fetchNotes();
+};
+
 module.exports = {
     addNote,
     removeNote,
     readNote,
+    getAll,
     logNote
 };
